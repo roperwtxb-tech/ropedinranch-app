@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roped In Ranch · Cisco, Texas</title>
+<meta name="description" content="Roped In Ranch is a family homestead near Cisco, Texas: rescue goats, guardian dogs, horses, Fred the turkey and a whole lot more. Meet the crew, find our coloring books, and shop ranch gear.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<meta property="og:title" content="Roped In Ranch · Cisco, Texas">
+<meta property="og:description" content="Real animals from a real Texas ranch.">
+<meta property="og:image" content="img/hero-wilson.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1F1C18; --sub:#5A534B; --cream:#F6F1E8; --sand:#EAE1D1;
+    --red:#9E1B24; --red-dark:#7C141B; --olive:#4C4F32; --line:#D8CDB9;
+    --max:1180px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Work Sans',system-ui,sans-serif;color:var(--ink);background:var(--cream);font-size:18px;line-height:1.6}
+  img{max-width:100%;display:block}
+  a{color:var(--red)} a:hover{color:var(--red-dark)}
+  h1,h2,h3{font-family:'Rye',Georgia,serif;font-weight:400;line-height:1.15;margin:0}
+  h2{font-size:clamp(32px,4.5vw,48px)}
+  h3{font-size:24px}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+  .kicker{font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin:0 0 10px}
+  .lead{font-size:20px;color:var(--sub);max-width:720px}
+  section{padding:88px 0}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;background:var(--red);color:#fff;text-decoration:none;font-weight:600;border:2px solid var(--red)}
+  .btn:hover{background:var(--red-dark);border-color:var(--red-dark);color:#fff}
+  .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.8)}
+  .btn.ghost:hover{background:rgba(255,255,255,.12)}
+
+  /* nav */
+  header.nav{position:sticky;top:0;z-index:20;background:rgba(246,241,232,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+  .brand img{width:44px}
+  .brand span{font-family:'Rye',serif;font-size:22px}
+  .nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:4px 22px;margin:0;padding:8px 0}
+  .nav ul a{color:var(--ink);text-decoration:none;font-weight:600;font-size:16px}
+  .nav ul a:hover{color:var(--red)}
+
+  /* hero */
+  .hero{position:relative;min-height:min(88vh,760px);display:flex;align-items:flex-end;color:#fff;padding:0;
+    background:linear-gradient(180deg,rgba(0,0,0,.05) 30%,rgba(0,0,0,.65)),url(img/hero-wilson.jpg) center 55%/cover no-repeat}
+  .hero .wrap{padding-bottom:72px;padding-top:120px}
+  .hero img.logo{width:120px;margin-bottom:18px}
+  .hero h1{font-size:clamp(40px,7vw,78px);text-shadow:0 2px 18px rgba(0,0,0,.35)}
+  .hero p{font-size:clamp(18px,2.2vw,22px);max-width:640px;margin:14px 0 26px;text-shadow:0 1px 10px rgba(0,0,0,.4)}
+  .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+
+  /* story */
+  .story-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  .story-grid p{margin:0 0 16px}
+  .story-img{border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+  .numbers{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px;margin-top:28px}
+  .num{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+  .num b{display:block;font-family:'Rye',serif;font-weight:400;font-size:30px;color:var(--olive)}
+  .num span{font-size:15px;color:var(--sub)}
+
+  /* crew */
+  .crew{background:var(--sand)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;margin-top:40px}
+  .card{background:#fff;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .card .body{padding:18px 20px 22px}
+  .card .role{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin:6px 0 8px}
+  .card p{margin:0;font-size:16px;color:var(--sub)}
+  .card.wide{grid-column:1/-1;flex-direction:row}
+  .card.wide img{width:55%;aspect-ratio:auto;min-height:300px}
+  .card.wide .body{align-self:center;padding:28px 32px}
+  .babies{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--olive);color:#fff;border-radius:18px;overflow:hidden;margin-top:28px}
+  .babies img{width:100%;height:100%;object-fit:cover;object-position:center 75%;min-height:280px}
+  .babies .body{padding:36px}
+  .babies h3{font-size:30px;margin-bottom:10px}
+  .babies p{margin:0 0 12px;color:#EDEBDD}
+
+  /* legends */
+  .legends{background:var(--ink);color:#F1EBDF}
+  .legends .kicker{color:#E7B9A2}
+  .legends .lead{color:#CFC6B7}
+  .legend-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;margin-top:40px}
+  .legend img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;filter:sepia(.18)}
+  .legend h3{margin:16px 0 6px}
+  .legend p{margin:0;color:#CFC6B7;font-size:16px}
+
+  /* books */
+  .books-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px;margin-top:40px}
+  .book{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;display:grid;grid-template-columns:120px 1fr;gap:22px;align-items:center}
+  .book img{width:120px;height:140px;object-fit:contain}
+  .book p{margin:6px 0 16px;color:var(--sub);font-size:16px}
+  .books-cta{margin-top:30px}
+
+  /* shop */
+  .shop{background:var(--sand)}
+  .shop-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .shop-img{border-radius:18px;overflow:hidden}
+  .shop ul{padding-left:20px;color:var(--sub)}
+
+  /* join */
+  .join{background:var(--red);color:#fff;text-align:center}
+  .join .kicker{color:#F6D7CF}
+  .join h2{margin-bottom:12px}
+  .join p{max-width:620px;margin:0 auto 24px;color:#FBEAE6}
+  .join .btn{background:#fff;color:var(--red);border-color:#fff}
+  .join .btn:hover{background:var(--cream)}
+
+  footer{background:var(--ink);color:#CFC6B7;padding:48px 0;font-size:15px}
+  footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+  footer img{width:64px}
+  footer a{color:#fff}
+  .verse{font-family:'Rye',serif;color:#F1EBDF;font-size:17px}
+
+  @media (max-width:820px){
+    section{padding:64px 0}
+    .story-grid,.shop-grid,.babies{grid-template-columns:1fr}
+    .card.wide{flex-direction:column}
+    .card.wide img{width:100%;min-height:0;aspect-ratio:4/3}
+    .book{grid-template-columns:90px 1fr}
+    .book img{width:90px;height:110px}
+    .nav ul{gap:4px 16px}
+    .brand span{font-size:19px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="img/logo-black.png" alt=""><span>Roped In Ranch</span></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#crew">Meet the Crew</a></li>
+        <li><a href="#legends">Legends</a></li>
+        <li><a href="#books">Books</a></li>
+        <li><a href="#shop">Shop</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-label="Welcome">
+    <div class="wrap">
+      <img class="logo" src="img/logo-white.png" alt="Roped In Ranch logo">
+      <h1>Real animals.<br>Real Texas ranch.</h1>
+      <p>A family homestead near Cisco, Texas, where the animals have always been part of the family.</p>
+      <div class="ctas">
+        <a class="btn" href="#crew">Meet the Crew</a>
+        <a class="btn ghost" href="#books">Our Coloring Books</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="story">
+    <div class="wrap story-grid">
+      <div>
+        <p class="kicker">Our Story</p>
+        <h2>How we got roped in</h2>
+        <p style="margin-top:22px">Sean and Jess have been together since 2014, and animals have been part of the story from the start. Sean grew up spending summers riding along with his dad, and Jess brought home a shelf full of awards from years of trail riding competitions.</p>
+        <p>Horses and dogs have been part of our life together from day one. Then came three rescue goats, and that&rsquo;s when things really took off. One goat, turkey, chicken and pig at a time, it grew into the working 15-acre homestead we call Roped In Ranch.</p>
+        <p>Our goal is to be as self-sustaining as we can and to do as much as possible ourselves. Our kids have grown up with these animals as part of their everyday lives, and to them, every one of these critters is family.</p>
+        <div class="numbers" aria-label="The ranch by the numbers">
+          <div class="num"><b>15</b><span>acres near Cisco, TX</span></div>
+          <div class="num"><b>~35</b><span>goats (and counting)</span></div>
+          <div class="num"><b>~50</b><span>chickens</span></div>
+          <div class="num"><b>12</b><span>dogs</span></div>
+          <div class="num"><b>3</b><span>horses</span></div>
+          <div class="num"><b>6</b><span>Kunekune pigs</span></div>
+        </div>
+      </div>
+      <div class="story-img"><img src="img/trailer.jpg" alt="The back of the ranch's stock trailer, hand-painted with ROPED IN RANCH"></div>
+    </div>
+  </section>
+
+  <section id="crew" class="crew">
+    <div class="wrap">
+      <p class="kicker">Meet the Crew</p>
+      <h2>The ones who really run the place</h2>
+      <p class="lead">Every animal in our coloring books is a real member of this crew. Here are a few of the regulars.</p>
+
+      <div class="cards">
+        <article class="card">
+          <img src="img/wilson.jpg" alt="Wilson, a big white guardian dog, grinning up at the camera">
+          <div class="body"><h3>Wilson</h3><p class="role">Head of Security</p>
+            <p>Our alpha livestock guardian, leader of the pack, and the best dog we&rsquo;ve ever had. Nothing gets past Wilson.</p></div>
+        </article>
+        <article class="card">
+          <img src="img/dixie-hottub.jpg" alt="Dixie, a German Shepherd, lounging in a stock-tank water trough">
+          <div class="body"><h3>Dixie</h3><p class="role">Work Crew &amp; Hot Tub Enthusiast</p>
+            <p>Our German Shepherd and Sean&rsquo;s right hand on every job around the property. She learned from Sadie, and now she&rsquo;s training our newest pup, Red.</p></div>
+        </article>
+        <article class="card">
+          <img src="img/fred.jpg" alt="Fred the turkey in full strut in front of the red barn">
+          <div class="body"><h3>Fred</h3><p class="role">The Foreman</p>
+            <p>Follows Sean everywhere and supervises every project. He has never once approved of how we did anything.</p></div>
+        </article>
+        <article class="card">
+          <img src="img/ocho.jpg" alt="Ocho, a horned buck with a long beard, standing by the red barn">
+          <div class="body"><h3>Ocho</h3><p class="role">The Original G.O.A.T.</p>
+            <p>Our buck, complete with the horns, the beard and the ice-blue stare. He knows exactly how handsome he is.</p></div>
+        </article>
+        <article class="card wide">
+          <img src="img/ammo-winnie.jpg" alt="Ammo, a bay horse, and Winnie, a buckskin, trotting together">
+          <div class="body"><h3>Ammo, Tipsy &amp; Winnie</h3><p class="role">The Horse Herd</p>
+            <p>Ammo is Jess&rsquo;s trail competition horse and the boss of the herd. Tipsy is our palomino, and Winnie, her buckskin daughter, is the youngest and has opinions about everything.</p></div>
+        </article>
+      </div>
+
+      <div class="babies">
+        <img src="img/babies.jpg" alt="Two baby goats standing on a wooden beam in the barn">
+        <div class="body">
+          <p class="kicker" style="color:#E9DDB4">New arrivals</p>
+          <h3>Nine new kids on the ranch!</h3>
+          <p>We welcomed a whole crop of baby goats around Halloween 2026, and they&rsquo;ve already discovered that the barn beams make excellent stages.</p>
+          <p><b>Names coming soon.</b> Follow along on Facebook. We may need your help naming a few of them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="legends" class="legends">
+    <div class="wrap">
+      <p class="kicker">Ranch Legends</p>
+      <h2>Gone, never forgotten</h2>
+      <p class="lead">Some of the animals who made this place what it is.</p>
+      <div class="legend-grid">
+        <article class="legend">
+          <img src="img/sadie.jpg" alt="Sadie, a German Shepherd, resting in a water trough">
+          <h3>Sadie</h3>
+          <p>Smart, loyal and a great teacher. Sadie trained Dixie, and Dixie is now passing those same lessons on to Red. Part of Sadie&rsquo;s teaching was knowing when to take it easy.</p>
+        </article>
+        <article class="legend">
+          <img src="img/george.jpg" alt="George, a rooster with copper and green feathers">
+          <h3>George</h3>
+          <p>A friendly rooster who made it his job to follow Dad around the property.</p>
+        </article>
+        <article class="legend">
+          <img src="img/mischa.jpg" alt="Mischa, a boxer, sitting in the living room">
+          <h3>Mischa</h3>
+          <p>Our boxer, who lived to the grand old age of 13.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="books">
+    <div class="wrap">
+      <p class="kicker">Our Books</p>
+      <h2>From the barn to the page</h2>
+      <p class="lead">Every picture in our coloring books is drawn from a photo of a real animal living at Roped In Ranch, paired with a verse of Scripture.</p>
+      <div class="books-grid">
+        <article class="book">
+          <img src="img/art-pup.png" alt="Line drawing of a German Shepherd puppy from Little Ranchers">
+          <div><h3>Little Ranchers</h3>
+            <p>Simple, bold pictures for younger artists: puppies, baby goats, piglets, horses and more.</p>
+            <a class="btn" href="https://www.amazon.com/stores/author/B0HP5H3FMM">Find it on Amazon</a></div>
+        </article>
+        <article class="book">
+          <img src="img/art-goat.png" alt="Line drawing of a baby goat">
+          <div><h3>From the Barn to the Page</h3>
+            <p>A bigger book with pages from quick and simple to richly detailed, for when you&rsquo;re ready for a challenge.</p>
+            <a class="btn" href="https://www.amazon.com/stores/author/B0HP5H3FMM">Find it on Amazon</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop" class="shop">
+    <div class="wrap shop-grid">
+      <div class="shop-img"><img src="img/ocho-low.jpg" alt="Ocho the buck looking down at the camera"></div>
+      <div>
+        <p class="kicker">Ranch Gear</p>
+        <h2>Coming soon</h2>
+        <p class="lead" style="margin-top:16px">We&rsquo;re putting the final touches on Roped In Ranch hats, shirts and our first collectible Christmas ornament.</p>
+        <ul>
+          <li>Embroidered logo trucker hats</li>
+          <li>Logo tees in olive and more</li>
+          <li>The 2026 First Edition Christmas ornament, with a new one every year</li>
+          <li>And yes, an Original G.O.A.T. hoodie starring Ocho</li>
+        </ul>
+        <p style="color:var(--sub)">Every item is made to order, just for you.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="join" aria-label="Stay in touch">
+    <div class="wrap">
+      <p class="kicker">Join the Herd</p>
+      <h2>Keep up with the crew</h2>
+      <p>Baby goat updates, new books, and the first look when the shop opens. Follow along with us on Facebook.</p>
+      <a class="btn" href="https://www.facebook.com/ropedinranch">Follow on Facebook</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex;align-items:center;gap:16px">
+      <img src="img/logo-white.png" alt="">
+      <div>Roped In Ranch<br>Cisco, Texas<br><a href="mailto:ropedinranch@gmail.com">ropedinranch@gmail.com</a></div>
+    </div>
+    <div class="verse">&ldquo;This is the day which the LORD hath made; we will rejoice and be glad in it.&rdquo;<br><span style="font-family:'Work Sans',sans-serif;font-size:13px;letter-spacing:.12em">PSALM 118:24</span></div>
+    <div>&copy; 2026 Roped In Ranch</div>
+  </div>
+</footer>
+
+</body>
+</html>
