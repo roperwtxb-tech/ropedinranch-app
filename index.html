@@ -90,10 +90,11 @@
   .legend p{margin:0;color:#CFC6B7;font-size:16px}
 
   /* books */
-  .books-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px;margin-top:40px}
+  .books-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:40px}
   .book{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;display:grid;grid-template-columns:120px 1fr;gap:22px;align-items:center}
   .book img{width:120px;height:140px;object-fit:contain}
   .book p{margin:6px 0 16px;color:var(--sub);font-size:16px}
+  @media (max-width:760px){.books-grid{grid-template-columns:1fr}}
   .books-cta{margin-top:30px}
 
   /* shop */
@@ -103,6 +104,13 @@
   .shop ul{padding-left:20px;color:var(--sub)}
 
   /* join */
+  .more-books{background:var(--cream);padding:64px 0}
+  .more-books .lead{max-width:640px}
+  .covers{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:24px;margin:32px 0 28px}
+  .covers figure{margin:0;text-align:center}
+  .covers img{width:100%;max-width:170px;aspect-ratio:2/3;object-fit:cover;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+  .covers figcaption{margin-top:12px;font-weight:600;font-size:15px;line-height:1.3}
+  .covers figcaption span{display:block;font-weight:400;color:var(--sub);font-size:14px}
   .join{background:var(--red);color:#fff;text-align:center}
   .join .kicker{color:#F6D7CF}
   .join h2{margin-bottom:12px}
@@ -268,6 +276,18 @@
             <p>A bigger book with pages from quick and simple to richly detailed, for when you&rsquo;re ready for a challenge.</p>
             <a class="btn" href="https://www.amazon.com/stores/author/B0HP5H3FMM">Find it on Amazon</a></div>
         </article>
+        <article class="book">
+          <img src="https://m.media-amazon.com/images/I/61-nkW2C2RL._SL400_.jpg" alt="Cover of Roped In Ranch: Color by Number" loading="lazy">
+          <div><h3>Color by Number</h3>
+            <p>Our farm animals as color-by-number pages for kids. Match the numbers and watch the ranch come to life.</p>
+            <a class="btn" href="https://www.amazon.com/stores/author/B0HP5H3FMM">Find it on Amazon</a></div>
+        </article>
+        <article class="book">
+          <img src="https://m.media-amazon.com/images/I/71uBk-763HL._SL400_.jpg" alt="Cover of Roped In Ranch: Unwind at the Ranch" loading="lazy">
+          <div><h3>Unwind at the Ranch</h3>
+            <p>A relaxing coloring book for grown-ups, with detailed pages of horses and the rest of the crew.</p>
+            <a class="btn" href="https://www.amazon.com/stores/author/B0HP5H3FMM">Find it on Amazon</a></div>
+        </article>
       </div>
     </div>
   </section>
@@ -289,6 +309,21 @@
         <p style="color:var(--sub)">Every item is made to order, just for you. For Christmas delivery, please order by December 5.</p>
         <a class="btn" href="https://www.etsy.com/shop/RopedInRanchTX" target="_blank" rel="noopener">Shop on Etsy</a>
       </div>
+    </div>
+  </section>
+
+  <section class="more-books" aria-label="More books by Sean Roper">
+    <div class="wrap">
+      <p class="kicker">Beyond the Ranch</p>
+      <h2>More books by Sean</h2>
+      <p class="lead">When he&rsquo;s not fixing fence, Sean writes historical fiction and adventure stories for kids.</p>
+      <div class="covers">
+        <figure><img src="https://m.media-amazon.com/images/I/81KrfVhPb9L._SL500_.jpg" alt="Cover of Those Who Answer" loading="lazy"><figcaption>Those Who Answer<span>A novel of the American Revolution</span></figcaption></figure>
+        <figure><img src="https://m.media-amazon.com/images/I/91xh9DaB4eL._SL500_.jpg" alt="Cover of Through the Mountain: The Whisper" loading="lazy"><figcaption>Through the Mountain: The Whisper<span>Book One</span></figcaption></figure>
+        <figure><img src="https://m.media-amazon.com/images/I/91gXcdeTrCL._SL500_.jpg" alt="Cover of Through the Mountain: The Pulse" loading="lazy"><figcaption>Through the Mountain: The Pulse<span>Book Two</span></figcaption></figure>
+        <figure><img src="https://m.media-amazon.com/images/I/91e8B3JZEvL._SL500_.jpg" alt="Cover of Riley and Elenoria: The Gold Ribbon" loading="lazy"><figcaption>Riley and Elenoria<span>The Gold Ribbon</span></figcaption></figure>
+      </div>
+      <a class="btn" href="https://www.amazon.com/stores/author/B0HP5H3FMM/allbooks">See all of Sean&rsquo;s books on Amazon</a>
     </div>
   </section>
 
